@@ -55,6 +55,11 @@ function match_viewer_OpeningFcn(hObject, eventdata, handles, varargin)
 % Choose default command line output for match_viewer
 handles.output = hObject;
 
+% Check there is enough inputs
+narginchk(2,Inf); % need at least 2 inputs
+validateattributes(varargin{1},'Pulse'); % first is Pulse
+validateattributes(varargin{2},'struct') % second is embryo_stack
+
 % Get data
 pulse = varargin{1}; handles.pulse = pulse;
 categories = pulse.categories;
