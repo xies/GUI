@@ -20,7 +20,8 @@ h.frames2load = selected_frame;
 handles.frame = selected_frame;
 
 % Update texts
-set( handles.current_frame,'String',num2str( get(handles.slider2,'Value') ) );
+set( handles.current_frame,'String',num2str( get(handles.slider2,'Value') ...
+    + handles.embryo_struct.input.t0) );
 
 make_cell_img(h);
 
