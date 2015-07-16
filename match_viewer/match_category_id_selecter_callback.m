@@ -53,11 +53,11 @@ handles.current_category = current_cat;
 [trackID, fitID] = pulse.graph(current_cat,catID,handles.axes_panel);
 
 % Update cell/track/fit being displayed
-candidate_tracks = pulse.tracks.get_trackID(trackID);
+candidate_tracks = pulse.get_trackID(trackID);
 if ~isempty(candidate_tracks)
     handles.current_cell = candidate_tracks(1).cellID;
 else
-    candidate_fits = pulse.fits.get_fitID(fitID);
+    candidate_fits = pulse.get_fitID(fitID);
     handles.current_cell = candidate_fits(1).cellID;
 end
 handles.current_tracks = trackID;

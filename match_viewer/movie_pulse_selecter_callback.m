@@ -22,7 +22,7 @@ whichID = get(handles.whichID,'Value');
 
 % get current_pulse according to which/whichID
 if strcmpi( which,'trackID' )
-    this_pulse = tracks.get_trackID( cats.(current_cat)(catID).(which) (whichID) );
+    this_pulse = pulse.get_trackID( cats.(current_cat)(catID).(which) (whichID) );
     frames = [this_pulse.dev_frame];
 else
     % get all frames and bounds of non-nan frames
