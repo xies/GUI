@@ -56,8 +56,9 @@ function manual_fit_OpeningFcn(hObject, eventdata, handles, varargin)
 handles.output = hObject;
 
 handles.init_params = varargin{1};
-cells = varargin{2}; stackID = varargin{3};
-handles.this_cell = cells([cells.stackID] == stackID);
+handles.this_cell = varargin{2};
+% cellID = varargin{3};
+% handles.this_cell = pulse.get_cellID(cellID);
 
 handles = plot_callback(handles);
 % plot( handles.axes1, this_cell.dev_time, this_cell.myosin_sm );
