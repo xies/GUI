@@ -5,7 +5,7 @@ this_pulse = handles.this_pulse;
 h.vx = handles.embryo_struct.vertex_x; h.vy = handles.embryo_struct.vertex_y;
 h.cellID = this_pulse.cellID;
 h.input = handles.embryo_struct.input;
-h.channels = {'Membranes','Raw Myosin'};
+h.channels = {'Membranes','Myosin'};
 h.border = 'on';
 % h.dev_frame = handles.embryo_struct.dev_frame;
 
